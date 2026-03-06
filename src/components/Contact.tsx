@@ -1,4 +1,4 @@
-import { Mail, MapPin, Send, ExternalLink, Globe } from 'lucide-react';
+import { Mail, MapPin, Send, Globe } from 'lucide-react';
 import { profileData } from '../data/profile';
 
 export const Contact = () => {
@@ -68,47 +68,53 @@ export const Contact = () => {
                         </div>
                     </div>
 
-                    {/* Right Column: Freelance Links */}
+                    {/* Right Column: Creative Workflow / Interests */}
                     <div className="space-y-6">
-                        <div className="glass-card p-8 md:p-10 rounded-3xl border border-border/50 h-full flex flex-col relative overflow-hidden">
+                        <div className="glass-card p-8 md:p-10 rounded-3xl border border-border/50 h-full flex flex-col relative overflow-hidden group">
                             {/* Accent Glow */}
-                            <div className="absolute -top-32 -right-32 w-64 h-64 bg-brand-400/20 rounded-full blur-[80px]"></div>
+                            <div className="absolute -top-32 -right-32 w-64 h-64 bg-primary/20 rounded-full blur-[80px] group-hover:bg-primary/30 transition-colors duration-500"></div>
 
                             <div className="flex items-center gap-3 mb-8 relative z-10">
-                                <Globe className="w-6 h-6 text-brand-400" />
-                                <h3 className="text-2xl font-bold text-foreground">Freelance Platforms</h3>
+                                <Globe className="w-6 h-6 text-primary" />
+                                <h3 className="text-2xl font-bold text-foreground">How I Work</h3>
                             </div>
 
-                            <p className="text-muted-foreground mb-10 leading-relaxed font-medium relative z-10">
-                                Over the years, I've successfully delivered high-quality web solutions to clients globally through various freelance marketplaces. You can view my verified work history, reviews, and client feedback on these platforms.
-                            </p>
+                            <div className="space-y-8 relative z-10">
+                                <div className="flex gap-4">
+                                    <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center shrink-0 border border-primary/20">
+                                        <span className="text-lg font-bold text-primary">01</span>
+                                    </div>
+                                    <div>
+                                        <h4 className="font-bold text-lg mb-1">Discover & Plan</h4>
+                                        <p className="text-muted-foreground text-sm">Understanding requirements and architecting the perfect solution for your needs.</p>
+                                    </div>
+                                </div>
 
-                            <div className="flex flex-col gap-4 relative z-10">
-                                {profileData.freelance.map((site, index) => (
-                                    <a
-                                        key={index}
-                                        href={site.url}
-                                        target="_blank"
-                                        rel="noreferrer"
-                                        className="w-full flex items-center justify-between p-5 rounded-2xl bg-secondary/50 border border-border/50 hover:border-brand-400/50 hover:bg-secondary transition-all group"
-                                    >
-                                        <div className="flex items-center gap-4">
-                                            {/* Simple visual indicator, can replace with actual brand icons if preferred */}
-                                            <div className="w-10 h-10 rounded-xl bg-background flex items-center justify-center font-black text-brand-400 border border-border shadow-sm group-hover:scale-105 transition-transform">
-                                                {site.platform.charAt(0)}
-                                            </div>
-                                            <span className="text-xl font-extrabold tracking-tight text-foreground">{site.platform}</span>
-                                        </div>
-                                        <div className="p-2 rounded-lg bg-background group-hover:bg-brand-400 group-hover:text-background transition-colors text-muted-foreground">
-                                            <ExternalLink className="w-4 h-4" />
-                                        </div>
-                                    </a>
-                                ))}
+                                <div className="flex gap-4">
+                                    <div className="w-12 h-12 rounded-2xl bg-brand-400/10 flex items-center justify-center shrink-0 border border-brand-400/20">
+                                        <span className="text-lg font-bold text-brand-400">02</span>
+                                    </div>
+                                    <div>
+                                        <h4 className="font-bold text-lg mb-1">Design & Develop</h4>
+                                        <p className="text-muted-foreground text-sm">Crafting high-performance code and intuitive user interfaces with precision.</p>
+                                    </div>
+                                </div>
+
+                                <div className="flex gap-4">
+                                    <div className="w-12 h-12 rounded-2xl bg-green-500/10 flex items-center justify-center shrink-0 border border-green-500/20">
+                                        <span className="text-lg font-bold text-green-500">03</span>
+                                    </div>
+                                    <div>
+                                        <h4 className="font-bold text-lg mb-1">Test & Deploy</h4>
+                                        <p className="text-muted-foreground text-sm">Rigorous testing followed by seamless deployment to production environments.</p>
+                                    </div>
+                                </div>
                             </div>
 
                             <div className="mt-auto pt-10 relative z-10">
-                                <div className="p-6 rounded-2xl border border-dashed border-primary/30 bg-primary/5 flexitems-center justify-center text-center">
-                                    <p className="text-sm font-semibold text-primary">Ready to start your next project? Let's talk!</p>
+                                <div className="p-6 rounded-2xl border border-dashed border-primary/30 bg-primary/5 text-center group-hover:bg-primary/10 transition-colors duration-300">
+                                    <p className="text-sm font-bold text-primary mb-1">Current Availability</p>
+                                    <p className="text-muted-foreground text-xs uppercase tracking-widest font-bold">Open for New Projects</p>
                                 </div>
                             </div>
                         </div>

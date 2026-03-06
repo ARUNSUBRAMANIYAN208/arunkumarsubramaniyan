@@ -6,14 +6,10 @@ export const profileData = {
         email: "arunsubramaniyan208@gmail.com",
         location: "Chennai, Tamil Nadu, India",
         github: "https://github.com/ARUNSUBRAMANIYAN208",
-        linkedin: "https://linkedin.com/in/arunkumar-subramaniyan",
-        instagram: "https://instagram.com/arun_dev_life",
+        linkedin: "https://www.linkedin.com/in/arunkumar-dev/",
+        instagram: "https://www.instagram.com/itzz__._ak/",
     },
-    freelance: [
-        { platform: "Upwork", url: "https://upwork.com" },
-        { platform: "Fiverr", url: "https://fiverr.com" },
-        { platform: "Freelancer", url: "https://freelancer.com" }
-    ],
+    // Removed freelance platforms as requested
     summary:
         "Full Stack Developer with 3+ years of experience building scalable web applications using React.js, Next.js, Node.js, Express.js, GraphQL, and PostgreSQL. Experienced in developing end-to-end solutions including frontend interfaces, backend APIs, database design, and cloud deployments. Strong expertise in modern architectures, reusable component design, performance optimization, and AI-powered systems using LLM and Retrieval-Augmented Generation (RAG).",
     skills: {
@@ -151,7 +147,7 @@ export const profileData = {
     stats: [
         { label: "Years Experience", value: 3, suffix: "+" },
         { label: "Projects Completed", value: 20, suffix: "+" },
-        { label: "Freelance Platforms", value: 3, suffix: "" },
+        { label: "AI Models Integrated", value: 5, suffix: "+" },
         { label: "Client Satisfaction", value: 100, suffix: "%" },
     ],
     services: [

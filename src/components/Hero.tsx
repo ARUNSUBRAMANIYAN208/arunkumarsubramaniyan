@@ -1,5 +1,5 @@
 import profilePicture from '../assets/arun_full_stack_developer.png';
-import { ArrowRight, Github, Mail, Linkedin, Instagram, Download } from 'lucide-react';
+import { ArrowRight, Github, Mail, Linkedin, Instagram, Download, Cpu } from 'lucide-react';
 import { profileData } from '../data/profile';
 import myResume from '../assets/Arunkumar_Subramaniyan_Full_Stack_Developer.pdf';
 
@@ -53,24 +53,21 @@ export const Hero = () => {
                             </a>
                         </div>
 
-                        <div className="flex flex-wrap items-center gap-6 pt-6 border-t border-border/50">
+                        <div className="flex items-center gap-5 pt-8 border-t border-border/50">
                             {[
-                                { icon: Github, url: profileData.contact.github, label: 'GitHub' },
-                                { icon: Linkedin, url: profileData.contact.linkedin, label: 'LinkedIn' },
-                                { icon: Instagram, url: profileData.contact.instagram, label: 'Instagram' },
-                                { icon: Mail, url: `mailto:${profileData.contact.email}`, label: 'Email' }
+                                { icon: Github, url: profileData.contact.github, hoverColor: 'hover:text-foreground' },
+                                { icon: Linkedin, url: profileData.contact.linkedin, hoverColor: 'hover:text-[#0077b5]' },
+                                { icon: Instagram, url: profileData.contact.instagram, hoverColor: 'hover:text-[#e4405f]' },
+                                { icon: Mail, url: `mailto:${profileData.contact.email}`, hoverColor: 'hover:text-primary' }
                             ].map((social, idx) => (
                                 <a
                                     key={idx}
                                     href={social.url}
                                     target="_blank"
                                     rel="noreferrer"
-                                    className="text-muted-foreground hover:text-primary transition-all flex items-center gap-2 group"
+                                    className={`w-12 h-12 rounded-full glass border border-border/50 flex items-center justify-center text-muted-foreground ${social.hoverColor} hover:border-primary/30 transition-all duration-500 transform hover:-translate-y-1.5 hover:shadow-[0_10px_20px_rgba(0,0,0,0.1)] dark:hover:shadow-[0_10px_20px_rgba(255,255,255,0.05)]`}
                                 >
-                                    <div className="p-2 rounded-full bg-secondary/50 group-hover:bg-primary/10 transition-colors">
-                                        <social.icon size={20} />
-                                    </div>
-                                    <span className="text-sm font-medium hidden sm:inline">{social.label}</span>
+                                    <social.icon size={22} className="transition-transform duration-500 group-hover:scale-110" />
                                 </a>
                             ))}
                         </div>
@@ -94,18 +91,28 @@ export const Hero = () => {
                                 </div>
                             </div>
 
-                            {/* Floating tech badges */}
-                            <div className="absolute top-10 left-0 glass-card px-4 py-2 rounded-xl flex items-center gap-2 animate-float">
-                                <div className="w-3 h-3 rounded-full bg-[#61DAFB]"></div>
-                                <span className="font-semibold text-sm">React.js</span>
+                            {/* Floating tech badges with specific brand icons */}
+                            <div className="absolute top-10 left-0 glass-card px-4 py-2.5 rounded-2xl flex items-center gap-3 animate-float border border-primary/20 shadow-lg">
+                                <svg width="24" height="24" viewBox="-11.5 -10.23174 23 20.46348" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-[#61DAFB]">
+                                    <circle cx="0" cy="0" r="2.05" fill="#61DAFB" />
+                                    <g stroke="#61DAFB" strokeWidth="1" fill="none">
+                                        <ellipse rx="11" ry="4.2" />
+                                        <ellipse rx="11" ry="4.2" transform="rotate(60)" />
+                                        <ellipse rx="11" ry="4.2" transform="rotate(120)" />
+                                    </g>
+                                </svg>
+                                <span className="font-bold text-sm tracking-tight text-foreground">React.js</span>
                             </div>
-                            <div className="absolute bottom-20 -left-6 glass-card px-4 py-2 rounded-xl flex items-center gap-2 animate-float-delayed">
-                                <div className="w-3 h-3 rounded-full bg-[#339933]"></div>
-                                <span className="font-semibold text-sm">Node.js</span>
+                            <div className="absolute bottom-20 -left-6 glass-card px-4 py-2.5 rounded-2xl flex items-center gap-3 animate-float-delayed border border-primary/20 shadow-lg">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 2L3.5 6.5V17.5L12 22L20.5 17.5V6.5L12 2Z" fill="#339933" />
+                                    <path d="M14.5 9.5C14.5 8.4 13.6 7.5 12.5 7.5H11.5C10.4 7.5 9.5 8.4 9.5 9.5V10.5C9.5 11.6 10.4 12.5 11.5 12.5H12.5C13.6 12.5 14.5 13.4 14.5 14.5V15.5C14.5 16.6 13.6 17.5 12.5 17.5H11.5C10.4 17.5 9.5 16.6 9.5 15.5" stroke="white" strokeWidth="1.5" strokeLinecap="round" />
+                                </svg>
+                                <span className="font-bold text-sm tracking-tight text-foreground">Node.js</span>
                             </div>
-                            <div className="absolute top-1/2 -right-8 glass-card px-4 py-2 rounded-xl flex items-center gap-2 animate-float">
-                                <span className="text-xl">🚀</span>
-                                <span className="font-semibold text-sm">AI / RAG</span>
+                            <div className="absolute top-1/2 -right-8 glass-card px-4 py-2.5 rounded-2xl flex items-center gap-3 animate-float border border-primary/20 shadow-lg">
+                                <Cpu className="w-5 h-5 text-primary" />
+                                <span className="font-bold text-sm tracking-tight text-foreground">AI / RAG Specialist</span>
                             </div>
                         </div>
                     </div>
