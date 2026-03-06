@@ -9,12 +9,13 @@ import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
 
 // New Components
-import { Stats } from './components/Stats';
+// import { Stats } from './components/Stats';
 import { Services } from './components/Services';
-import { Testimonials } from './components/Testimonials';
+// import { Testimonials } from './components/Testimonials';
 import { GithubGraph } from './components/GithubGraph';
-import { Blog } from './components/Blog';
-import { ResumeBanner } from './components/ResumeBanner';
+// import { Blog } from './components/Blog';
+// import { ResumeBanner } from './components/ResumeBanner';
+import { AILab } from './components/AILab';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
         <Experience />
         <GithubGraph />
         <Projects />
+        <AILab />
         {/* <Testimonials /> */}
         <Education />
         {/* <Blog /> */}

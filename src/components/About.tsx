@@ -1,5 +1,4 @@
-
-import { UserCheck } from 'lucide-react';
+import { UserCheck, Brain } from 'lucide-react';
 import { profileData } from '../data/profile';
 
 export const About = () => {
@@ -13,13 +12,13 @@ export const About = () => {
                         <div className="relative w-full aspect-square max-w-md mx-auto">
                             <div className="absolute inset-0 bg-gradient-to-tr from-primary/30 to-brand-300/30 rounded-3xl transform rotate-6 scale-95 transition-transform duration-500 group-hover:rotate-12"></div>
                             <div className="absolute inset-0 bg-gradient-to-bl from-card to-secondary rounded-3xl transform -rotate-3 transition-transform duration-500 group-hover:rotate-0 border border-border shadow-xl overflow-hidden flex items-center justify-center">
-                                {/* Abstract Data/Code pattern since we only have 1 photo for hero */}
-                                <div className="p-8 text-primary/20 opacity-50 absolute inset-0 font-mono text-xs overflow-hidden select-none pointer-events-none whitespace-pre break-words break-all">
+                                {/* Abstract Data/Code pattern - Significantly enhanced contrast */}
+                                <div className="p-8 text-primary/40 absolute inset-0 font-mono text-xs overflow-hidden select-none pointer-events-none whitespace-pre break-words break-all">
                                     {`const developer = {
   name: "Arunkumar",
   role: "Full Stack Developer",
-  skills: ["React", "Node", "PostgreSQL", "AI/RAG"],
-  passion: "Building scalable architectures",
+  skills: ["React", "Node", "Postgres", "AI/RAG"],
+  passion: "Architecting Scalable Systems",
   status: "Available"
 };
 
@@ -28,8 +27,11 @@ return (
 );`}
                                 </div>
 
-                                <h3 className="text-4xl md:text-5xl font-extrabold text-muted-foreground/30 relative z-10 -rotate-12 tracking-[0.5em] uppercase">
-                                    Develop<br />Design<br />Deploy
+                                {/* Main Text - More prominent but elegant */}
+                                <h3 className="text-4xl md:text-5xl font-black text-foreground/40 relative z-10 -rotate-12 tracking-[0.4em] uppercase text-center leading-[1.2]">
+                                    Develop<br />
+                                    <span className="text-primary italic">Design</span><br />
+                                    Deploy
                                 </h3>
                             </div>
                         </div>
@@ -46,8 +48,11 @@ return (
                             <div className="h-1 w-20 bg-primary rounded-full"></div>
                         </div>
 
-                        <div className="glass-card p-6 rounded-2xl border-l-4 border-l-primary">
-                            <p className="text-lg text-foreground/90 leading-relaxed font-medium">
+                        <div className="glass-card p-8 rounded-[2rem] border-l-4 border-l-primary relative overflow-hidden group">
+                            <div className="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
+                                <Brain size={120} />
+                            </div>
+                            <p className="text-xl text-foreground/90 leading-relaxed font-semibold relative z-10">
                                 {profileData.summary}
                             </p>
                         </div>

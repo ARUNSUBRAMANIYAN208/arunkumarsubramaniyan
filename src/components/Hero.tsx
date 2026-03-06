@@ -5,7 +5,7 @@ import myResume from '../assets/Arunkumar_Subramaniyan_Full_Stack_Developer.pdf'
 
 export const Hero = () => {
     return (
-        <section className="relative min-h-screen flex items-center pt-20 pb-10 overflow-hidden bg-background">
+        <section className="relative min-h-screen flex items-center pt-20  overflow-hidden bg-background">
             {/* Background Decorators */}
             <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-primary/20 rounded-full blur-[120px] -z-10 mix-blend-multiply dark:mix-blend-color-dodge animate-float"></div>
             <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-brand-300/20 rounded-full blur-[100px] -z-10 mix-blend-multiply dark:mix-blend-color-dodge animate-float-delayed"></div>

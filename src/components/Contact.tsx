@@ -111,12 +111,12 @@ export const Contact = () => {
                                 </div>
                             </div>
 
-                            <div className="mt-auto pt-10 relative z-10">
+                            {/* <div className="mt-auto pt-10 relative z-10">
                                 <div className="p-6 rounded-2xl border border-dashed border-primary/30 bg-primary/5 text-center group-hover:bg-primary/10 transition-colors duration-300">
                                     <p className="text-sm font-bold text-primary mb-1">Current Availability</p>
                                     <p className="text-muted-foreground text-xs uppercase tracking-widest font-bold">Open for New Projects</p>
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </div>

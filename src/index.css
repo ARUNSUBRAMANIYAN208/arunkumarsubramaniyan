@@ -98,3 +98,8 @@
 .animate-float-delayed {
   animation: float 6s ease-in-out 3s infinite;
 }
+
+/* Performance optimization for theme switching */
+.no-transitions * {
+  transition: none !important;
+}

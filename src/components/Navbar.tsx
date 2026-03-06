@@ -26,6 +26,9 @@ export const Navbar = () => {
     }, []);
 
     const toggleTheme = () => {
+        // Performance optimization: Disable transitions during theme switch
+        document.documentElement.classList.add('no-transitions');
+
         if (isDark) {
             document.documentElement.classList.remove('dark');
             localStorage.theme = 'light';
@@ -35,15 +38,24 @@ export const Navbar = () => {
             localStorage.theme = 'dark';
             setIsDark(true);
         }
+
+        // Force a reflow to apply the theme without transition
+        window.getComputedStyle(document.documentElement).opacity;
+
+        // Remove the no-transitions class after a small buffer
+        setTimeout(() => {
+            document.documentElement.classList.remove('no-transitions');
+        }, 0);
     };
 
     const navLinks = [
         { name: 'About', href: '#about' },
         { name: 'Services', href: '#services' },
         { name: 'Experience', href: '#experience' },
+        { name: 'AI Lab', href: '#ailab' },
         { name: 'Projects', href: '#projects' },
-        { name: 'Testimonials', href: '#testimonials' },
-        { name: 'Blog', href: '#blog' },
+        // { name: 'Testimonials', href: '#testimonials' },
+        // { name: 'Blog', href: '#blog' },
         { name: 'Contact', href: '#contact' },
     ];
 
