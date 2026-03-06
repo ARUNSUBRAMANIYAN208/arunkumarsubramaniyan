@@ -53,23 +53,24 @@ export const Navbar = () => {
                 <div className="flex justify-between items-center">
                     <div className="flex-shrink-0">
                         <a href="#" className="flex items-center gap-2 group">
-                            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-brand-300 flex items-center justify-center text-primary-foreground font-bold text-xl shadow-lg group-hover:shadow-primary/50 transition-all duration-300">
-                                A
+                            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-brand-300 flex items-center justify-center text-primary-foreground font-black text-xl shadow-lg group-hover:shadow-primary/50 transition-all duration-300">
+                                AS
                             </div>
-                            <span className="font-bold text-xl tracking-tight hidden sm:block">
-                                Arun<span className="text-primary">kumar</span>
+                            <span className="font-black text-2xl tracking-tight hidden sm:block text-foreground">
+                                Arun<span className="font-medium">kumar</span>
                             </span>
                         </a>
                     </div>
 
-                    <div className="hidden md:flex items-center space-x-8">
+                    <div className="hidden md:flex items-center space-x-1">
                         {navLinks.map((link) => (
                             <a
                                 key={link.name}
                                 href={link.href}
-                                className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors duration-200"
+                                className="px-4 py-2 text-sm font-bold text-foreground/80 hover:text-primary transition-all relative group"
                             >
                                 {link.name}
+                                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
                             </a>
                         ))}
 

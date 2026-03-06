@@ -1,12 +1,11 @@
 import profilePicture from '../assets/arun_full_stack_developer.png';
-import { ArrowRight, Github, Mail, MapPin } from 'lucide-react';
+import { ArrowRight, Github, Mail, Linkedin, Instagram, Download } from 'lucide-react';
 import { profileData } from '../data/profile';
-
-
+import myResume from '../assets/Arunkumar_Subramaniyan_Full_Stack_Developer.pdf';
 
 export const Hero = () => {
     return (
-        <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
+        <section className="relative min-h-screen flex items-center pt-20 pb-10 overflow-hidden bg-background">
             {/* Background Decorators */}
             <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-primary/20 rounded-full blur-[120px] -z-10 mix-blend-multiply dark:mix-blend-color-dodge animate-float"></div>
             <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-brand-300/20 rounded-full blur-[100px] -z-10 mix-blend-multiply dark:mix-blend-color-dodge animate-float-delayed"></div>
@@ -45,34 +44,40 @@ export const Hero = () => {
                                 <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
                             </a>
                             <a
-                                href="#contact"
-                                className="px-8 py-4 rounded-full glass border border-border font-semibold hover:bg-secondary transition-all transform hover:-translate-y-1"
+                                href={myResume}
+                                download="Arunkumar_Subramaniyan_Full_Stack_Developer.pdf"
+                                className="group flex items-center gap-2 px-8 py-4 rounded-full bg-primary text-primary-foreground font-semibold hover:bg-brand-600 transition-all transform hover:-translate-y-1 shadow-lg shadow-primary/20"
                             >
-                                Contact Me
+                                <Download size={18} className="group-hover:animate-bounce" />
+                                Download Resume
                             </a>
                         </div>
 
-                        <div className="flex items-center gap-6 pt-4 border-t border-border/50">
-                            <a href={profileData.contact.github} target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-primary transition-colors flex items-center gap-2">
-                                <Github size={20} />
-                                <span className="text-sm hidden sm:inline">GitHub</span>
-                            </a>
-                            <a href={`mailto:${profileData.contact.email}`} className="text-muted-foreground hover:text-primary transition-colors flex items-center gap-2">
-                                <Mail size={20} />
-                                <span className="text-sm hidden sm:inline">Email</span>
-                            </a>
-                            <div className="flex items-center gap-2 text-muted-foreground">
-                                <MapPin size={20} />
-                                <span className="text-sm hidden sm:inline">Chennai, IN</span>
-                            </div>
+                        <div className="flex flex-wrap items-center gap-6 pt-6 border-t border-border/50">
+                            {[
+                                { icon: Github, url: profileData.contact.github, label: 'GitHub' },
+                                { icon: Linkedin, url: profileData.contact.linkedin, label: 'LinkedIn' },
+                                { icon: Instagram, url: profileData.contact.instagram, label: 'Instagram' },
+                                { icon: Mail, url: `mailto:${profileData.contact.email}`, label: 'Email' }
+                            ].map((social, idx) => (
+                                <a
+                                    key={idx}
+                                    href={social.url}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className="text-muted-foreground hover:text-primary transition-all flex items-center gap-2 group"
+                                >
+                                    <div className="p-2 rounded-full bg-secondary/50 group-hover:bg-primary/10 transition-colors">
+                                        <social.icon size={20} />
+                                    </div>
+                                    <span className="text-sm font-medium hidden sm:inline">{social.label}</span>
+                                </a>
+                            ))}
                         </div>
                     </div>
 
                     <div className="order-1 lg:order-2 flex justify-center lg:justify-end relative">
                         <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-[450px] lg:h-[450px]">
-                            {/* Image Frame Decorators */}
-                            <div className="absolute inset-0 border-2 border-primary/30 rounded-full animate-[spin_10s_linear_infinite] border-dashed"></div>
-                            <div className="absolute inset-4 border-2 border-brand-300/40 rounded-full animate-[spin_15s_linear_infinite_reverse]"></div>
 
                             <div className="absolute inset-8 rounded-full overflow-hidden border-4 border-background shadow-2xl glass-card p-2 bg-gradient-to-tr from-primary/20 to-brand-300/20">
                                 <div className="w-full h-full rounded-full overflow-hidden bg-secondary relative">

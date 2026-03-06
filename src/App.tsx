@@ -22,17 +22,17 @@ function App() {
       <Navbar />
       <main>
         <Hero />
-        <Stats />
+        {/* <Stats /> */}
         <About />
         <Services />
         <Skills />
         <Experience />
         <GithubGraph />
         <Projects />
-        <Testimonials />
+        {/* <Testimonials /> */}
         <Education />
-        <Blog />
-        <ResumeBanner />
+        {/* <Blog /> */}
+        {/* <ResumeBanner /> */}
         <Contact />
       </main>
       <Footer />
