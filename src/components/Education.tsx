@@ -18,7 +18,7 @@ export const Education = () => {
                         {profileData.education.map((edu, idx) => (
                             <div
                                 key={idx}
-                                className="glass-card rounded-2xl p-8 flex flex-col md:flex-row md:items-center justify-between gap-6 hover:border-primary/50 transition-colors"
+                                className="glass-card rounded-2xl p-6 md:p-8 flex flex-col md:flex-row md:items-center justify-between gap-6 hover:border-primary/50 transition-colors"
                             >
                                 <div className="flex-1">
                                     <h3 className="text-2xl font-bold text-foreground mb-2">

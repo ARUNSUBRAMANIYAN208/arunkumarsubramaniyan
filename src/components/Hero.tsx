@@ -21,7 +21,7 @@ export const Hero = () => {
                                 </span>
                             </div>
 
-                            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-foreground">
+                            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-foreground leading-[1.1]">
                                 Hi, I'm <br />
                                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-brand-400">
                                     Arunkumar
@@ -91,9 +91,9 @@ export const Hero = () => {
                                 </div>
                             </div>
 
-                            {/* Floating tech badges with specific brand icons */}
-                            <div className="absolute top-10 left-0 glass-card px-4 py-2.5 rounded-2xl flex items-center gap-3 animate-float border border-primary/20 shadow-lg">
-                                <svg width="24" height="24" viewBox="-11.5 -10.23174 23 20.46348" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-[#61DAFB]">
+                            {/* Floating tech badges with specific brand icons - Responsive offsets */}
+                            <div className="absolute top-4 left-4 sm:top-10 sm:left-0 glass-card px-3 py-2 sm:px-4 sm:py-2.5 rounded-2xl flex items-center gap-2 sm:gap-3 animate-float border border-primary/20 shadow-lg z-20">
+                                <svg width="20" height="20" viewBox="-11.5 -10.23174 23 20.46348" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-[#61DAFB] sm:w-6 sm:h-6">
                                     <circle cx="0" cy="0" r="2.05" fill="#61DAFB" />
                                     <g stroke="#61DAFB" strokeWidth="1" fill="none">
                                         <ellipse rx="11" ry="4.2" />
@@ -101,18 +101,18 @@ export const Hero = () => {
                                         <ellipse rx="11" ry="4.2" transform="rotate(120)" />
                                     </g>
                                 </svg>
-                                <span className="font-bold text-sm tracking-tight text-foreground">React.js</span>
+                                <span className="font-bold text-xs sm:text-sm tracking-tight text-foreground">React.js</span>
                             </div>
-                            <div className="absolute bottom-20 -left-6 glass-card px-4 py-2.5 rounded-2xl flex items-center gap-3 animate-float-delayed border border-primary/20 shadow-lg">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <div className="absolute bottom-12 -left-2 sm:bottom-20 sm:-left-6 glass-card px-3 py-2 sm:px-4 sm:py-2.5 rounded-2xl flex items-center gap-2 sm:gap-3 animate-float-delayed border border-primary/20 shadow-lg z-20">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="sm:w-6 sm:h-6">
                                     <path d="M12 2L3.5 6.5V17.5L12 22L20.5 17.5V6.5L12 2Z" fill="#339933" />
                                     <path d="M14.5 9.5C14.5 8.4 13.6 7.5 12.5 7.5H11.5C10.4 7.5 9.5 8.4 9.5 9.5V10.5C9.5 11.6 10.4 12.5 11.5 12.5H12.5C13.6 12.5 14.5 13.4 14.5 14.5V15.5C14.5 16.6 13.6 17.5 12.5 17.5H11.5C10.4 17.5 9.5 16.6 9.5 15.5" stroke="white" strokeWidth="1.5" strokeLinecap="round" />
                                 </svg>
-                                <span className="font-bold text-sm tracking-tight text-foreground">Node.js</span>
+                                <span className="font-bold text-xs sm:text-sm tracking-tight text-foreground">Node.js</span>
                             </div>
-                            <div className="absolute top-1/2 -right-8 glass-card px-4 py-2.5 rounded-2xl flex items-center gap-3 animate-float border border-primary/20 shadow-lg">
-                                <Cpu className="w-5 h-5 text-primary" />
-                                <span className="font-bold text-sm tracking-tight text-foreground">AI / RAG Specialist</span>
+                            <div className="absolute top-1/2 -right-4 sm:-right-8 glass-card px-3 py-2 sm:px-4 sm:py-2.5 rounded-2xl flex items-center gap-2 sm:gap-3 animate-float border border-primary/20 shadow-lg z-20">
+                                <Cpu className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
+                                <span className="font-bold text-xs sm:text-sm tracking-tight text-foreground">AI / RAG Specialist</span>
                             </div>
                         </div>
                     </div>

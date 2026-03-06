@@ -28,7 +28,7 @@ export const Experience = () => {
                             {/* Hover glow effect for the entire card */}
                             <div className="absolute -inset-0.5 bg-gradient-to-r from-primary/50 to-brand-400/50 rounded-3xl blur opacity-0 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
 
-                            <div className="relative glass-card bg-card/40 backdrop-blur-xl border border-border/50 rounded-3xl overflow-hidden p-8 md:p-12 transition-all duration-300">
+                            <div className="relative glass-card bg-card/40 backdrop-blur-xl border border-border/50 rounded-3xl overflow-hidden p-6 md:p-12 transition-all duration-300">
 
                                 {/* Top Header / Company Info */}
                                 <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 mb-10 pb-8 border-b border-border/40">

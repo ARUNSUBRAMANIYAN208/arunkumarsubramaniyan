@@ -75,7 +75,7 @@ export const AILab = () => {
                     {/* Desktop Connection Line */}
                     <div className="hidden lg:block absolute top-1/2 left-0 w-full h-0.5 bg-gradient-to-r from-blue-500 via-purple-500 via-emerald-500 via-amber-500 to-rose-500 opacity-20 -translate-y-1/2 -z-10"></div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8 lg:gap-4 relative">
+                    <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-4 relative">
                         {steps.map((step, idx) => (
                             <div key={idx} className="relative group">
                                 <div className={`glass-card p-6 rounded-3xl border ${step.border} bg-background/50 backdrop-blur-xl h-full flex flex-col items-center text-center transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl`}>
@@ -91,10 +91,10 @@ export const AILab = () => {
                                         {step.description}
                                     </p>
 
-                                    {/* Mobile/Tablet Arrow */}
+                                    {/* Mobile/Tablet/Desktop Arrow */}
                                     {idx < steps.length - 1 && (
                                         <div className="lg:hidden mt-8 flex justify-center">
-                                            <ArrowRight className="text-muted-foreground rotate-90 md:rotate-0" />
+                                            <ArrowRight className="text-muted-foreground rotate-90" />
                                         </div>
                                     )}
                                 </div>
