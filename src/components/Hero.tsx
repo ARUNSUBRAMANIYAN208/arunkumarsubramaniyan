@@ -110,7 +110,7 @@ export const Hero = () => {
                                 </svg>
                                 <span className="font-bold text-xs sm:text-sm tracking-tight text-foreground">Node.js</span>
                             </div>
-                            <div className="absolute top-1/2 -right-4 sm:-right-8 glass-card px-3 py-2 sm:px-4 sm:py-2.5 rounded-2xl flex items-center gap-2 sm:gap-3 animate-float border border-primary/20 shadow-lg z-20">
+                            <div className="absolute top-1/2 -right-12 sm:-right-16 glass-card px-3 py-2 sm:px-4 sm:py-2.5 rounded-2xl flex items-center gap-2 sm:gap-3 animate-float border border-primary/20 shadow-lg z-20">
                                 <Cpu className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
                                 <span className="font-bold text-xs sm:text-sm tracking-tight text-foreground">AI / RAG Specialist</span>
                             </div>

@@ -60,7 +60,7 @@ export const Navbar = () => {
     ];
 
     return (
-        <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'glass py-3' : 'bg-transparent py-5'}`}>
+        <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'glass py-3 border-b border-border' : 'bg-transparent py-5'}`}>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center">
                     <div className="flex-shrink-0">
@@ -120,7 +120,7 @@ export const Navbar = () => {
             </div>
 
             {/* Mobile Menu */}
-            <div className={`md:hidden absolute w-full bg-background border-b border-border transition-all duration-300 overflow-hidden ${isMenuOpen ? 'max-h-96 py-4 shadow-xl' : 'max-h-0'}`}>
+            <div className={`md:hidden absolute w-full bg-background  transition-all duration-300 overflow-hidden ${isMenuOpen ? 'max-h-96 py-4 shadow-xl' : 'max-h-0'}`}>
                 <div className="px-4 space-y-2 flex flex-col">
                     {navLinks.map((link) => (
                         <a

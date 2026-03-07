@@ -10,7 +10,7 @@ export const Footer = () => {
                     <div className="max-w-sm text-center md:text-left">
                         <a href="#" className="flex items-center gap-2 group justify-center md:justify-start mb-4">
                             <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-brand-300 flex items-center justify-center text-primary-foreground font-bold text-lg shadow-md">
-                                A
+                                AS
                             </div>
                             <span className="font-bold text-lg tracking-tight">
                                 Arun<span className="text-primary">kumar</span>
